@@ -82,6 +82,13 @@
     margin: 7px;
     padding: 2px;
     color: #000000;
+    /* transition: width 1.3s ease-out; */
+}
+
+.navbar-link a:hover {
+  text-decoration: underline;
+  text-underline-offset: .4rem;
+  
 }
 
 .navbar-icons {
@@ -106,7 +113,7 @@
 }
 
 .navbar-search {
-    
+  background-color: rgb(247, 244, 244);
 }
 
 .navbar-search input::placeholder {
@@ -123,7 +130,7 @@
 
 .navbar-search-area {
     /* border: 1px solid rgb(255, 0, 115); */
-    background-color: rgb(247, 244, 244);
+    background-color: inherit;
     width: 120px;
     border: none;
     outline: none;
@@ -133,6 +140,11 @@
     /* padding: 2px; */
     
 }
+
+.navbar-search:hover {
+  background-color:  rgb(226, 224, 224);
+}
+
 
 .navbar-icon  {
     /* border: 1px blue solid; */
@@ -203,6 +215,11 @@ background-color: #aaaaaa;
     display: flex;
     justify-content: space-between;
     
+}
+
+.image-section-container .image-container {
+  flex-grow: 1;
+  
 }
 
 .image-container .images img{
@@ -516,6 +533,7 @@ background-color: #aaaaaa;
     font-size: .75rem;
     color: #a9a7a7;
     transform: all .3s ease 0s;
+    text-decoration: none;
   }
   
   .footer__col li a:hover {
@@ -588,13 +606,18 @@ background-color: #aaaaaa;
 
 
 
-
-
 /* media query */
 @media(max-width: 977px) {
   .image-section-container {
     flex-wrap: wrap;
   }
+}
+
+@media(max-width: 990px) {
+  .image-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
 }
 
 @media(max-width: 928px) {
