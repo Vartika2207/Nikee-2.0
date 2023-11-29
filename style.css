@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+.top-header-links-container {
+  background-color: rgb(247, 244, 244);
+}
+
 .top-header-links {
     /* border: 1px black solid; */
-    background-color: rgb(247, 244, 244);
+    
     display: flex;
     align-items: center;
     justify-content: space-between ;
+    margin: 0 20px;
 }
 
 .header-link-container {
@@ -303,6 +308,103 @@ background-color: #aaaaaa;
 }
 
 
+/* clickable image */
+.clickable-images {
+  margin: 0 20px;
+  /* border: #000000 solid 1px; */
+}
+
+.clickable-image-container .text-holder {
+  /* border:  1px solid blue; */
+  font-size: 1.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 1rem 1.3rem;
+} 
+
+.clickable-images {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.clickable-image {
+  /* background-image: url(nike-video.jpg); */
+  background-size: cover;
+  height: 30rem;
+  padding: 1rem;
+  width: 25rem;
+  margin: 0.5rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+#ck__img1 {
+  background-image: url(images/clickable-img.jpg);
+  background-size: cover;
+  text-align: center;
+  color: #8968fc;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+#ck__img2 {
+  background-image: url(images/clickable-img.jpg);
+  background-size: cover;
+  text-align: center;
+  color: #cdfd62;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+#ck__img3 {
+  background-image: url(images/clickable-img.jpg);
+  background-size: cover;
+  text-align: center;
+  color: #ef4223;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.ck__bottom {
+  color: #fff;
+  font-size: 1.2rem;
+  /* position: relative; */
+  font-weight: normal;
+  display: table;
+
+  /* vertical-align: bottom; */
+}
+
+.ck__bottom p {
+    display: table-cell;
+    text-align: left;
+}
+
+.ck__bottom a {
+  text-decoration: none;
+}
+
+.ck__bottom button {
+    padding: 0.7rem 1.5rem;
+    background-color: #fff;
+    border-radius: 0.9rem;
+    color: #000000;
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.3s ease 0s;
+    border: none;
+}
+
+.ck__bottom button:hover {
+    background-color: #c5c4c4;
+}
+
+
+
+
+
+
+
+
 
 /* bottomList */
 .bottom__list {
@@ -384,6 +486,7 @@ background-color: #aaaaaa;
   .footer__col {
     width: 25%;
     padding: 0 1rem;
+    flex-direction: row;
   }
   
   .footer__col h4 {
@@ -488,7 +591,13 @@ background-color: #aaaaaa;
 
 
 /* media query */
-@media(max-width: 920px) {
+@media(max-width: 977px) {
+  .image-section-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 928px) {
     .navbar-icons {
         display: none
     }
@@ -509,6 +618,17 @@ background-color: #aaaaaa;
     }
 }
 
+@media(max-width: 855px) {
+  .footer__col {
+    width: 50%;
+    margin-bottom: 1.8rem;
+  }
+
+  .fb__container {
+    display: none;
+  }
+}
+
 /* media queries */
 @media(max-width: 767px) {
   .footer__col {
@@ -523,6 +643,16 @@ background-color: #aaaaaa;
   .bl__col {
     width: 50%;
     margin-bottom: 1.8rem;
+  }
+
+  .clickable-images {
+    display:list-item;
+    /* width: 50%; */
+    margin-bottom: 1.8rem;
+  }
+
+  .clickable-image {
+    width: 30rem;
   }
 
   .header-menu-list a{
@@ -563,3 +693,5 @@ background-color: #aaaaaa;
     display: list-item;
   }
 }
+
+
